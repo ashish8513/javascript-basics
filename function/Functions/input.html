@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .new-div{
+        background-color: aqua;
+        height: 60px;
+        width: 10px;
+    }
+    </style>
+</head>
+
+<body>
+    <label for="input1">Input 1:</label>
+    <input type="text" id="input1">
+    <br><br>
+    <label for="input2">Input 2:</label>
+    <input type="text" id="input2">
+    <br><br>
+    <button onclick="createDiv()">Create Div</button>
+    <script>
+        function createDiv() {
+            // Get the input values
+            const input1Value = document.getElementById('input1').value;
+            const input2Value = document.getElementById('input2').value;
+
+            // Create a new div element
+            const newDiv = document.createElement('div');
+            newDiv.className = 'new-div';
+            newDiv.textContent = `Input 1: ${input1Value}`;
+
+            // Append the new div to the body
+            document.body.appendChild(newDiv);
+        }
+    </script>
+</body>
+
+</html>
